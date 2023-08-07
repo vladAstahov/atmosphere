@@ -1,0 +1,22 @@
+.button-icon {
+    $b: &;
+
+    @include media-desktop {
+        transition: 0.3s ease;
+        transition-property: border-color;
+
+        &__icon {
+            transition: 0.3s ease;
+            transition-property: color;
+        }
+
+        &:hover {
+            border-color: var(--primaryHover);
+
+            #{$b}__icon {
+                color: var(--primaryHover);
+            }
+        }
+    }
+
+}

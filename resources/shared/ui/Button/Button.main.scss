@@ -1,0 +1,36 @@
+.button {
+    $b: &;
+
+    transition: 0.3s ease;
+    transition-property: background-color, color, border-color;
+
+    &.is-disabled {
+        pointer-events: none;
+        border-color: var(--primaryDisable);
+        color: var(--primary);
+
+        &.button--view {
+            &-primary {
+                background-color: var(--primaryDisable);
+            }
+        }
+
+        #{$b}__content {
+            opacity: 0.2;
+        }
+    }
+
+    &:active {
+        background-color: var(--primaryActive);
+        color: var(--surfaceText);
+        border-color: var(--primaryActive);
+    }
+
+    @include media-desktop {
+        &:hover {
+            background-color: var(--primaryHover);
+            color: var(--surfaceText);
+            border-color: var(--primaryHover);
+        }
+    }
+}

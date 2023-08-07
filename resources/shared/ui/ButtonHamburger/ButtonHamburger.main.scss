@@ -1,0 +1,22 @@
+.button-hamburger {
+    span {
+        transition: 0.3s ease;
+        transition-property: opacity, transform;
+    }
+
+    &.is-active {
+        span {
+            &:first-child {
+                transform: translate(0, toRem(9)) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:last-child {
+                transform: translate(0, toRem(-9)) rotate(-45deg);
+            }
+        }
+    }
+}

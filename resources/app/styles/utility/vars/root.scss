@@ -1,0 +1,11 @@
+@import './colors.scss';
+
+:root {
+    --primary: #{$primary};
+    --primaryHover: #{$primaryHover};
+    --primaryActive: #{$primaryActive};
+    --primaryDisable: #{$primaryDisable};
+
+    --surfaceText: #{$surfaceText};
+    --primaryText: #{$primaryText};
+}

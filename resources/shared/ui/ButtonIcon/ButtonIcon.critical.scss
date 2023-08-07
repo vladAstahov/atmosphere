@@ -1,0 +1,11 @@
+.button-icon {
+    width: toRem(48);
+    height: toRem(48);
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+
+    &__icon {
+        color: var(--primary);
+        font-size: toRem(20);
+    }
+}

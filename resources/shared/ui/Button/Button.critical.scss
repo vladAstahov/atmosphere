@@ -1,0 +1,32 @@
+.button {
+    border-radius: toRem(35);
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: var(--primary);
+
+    &--view {
+        &-primary {
+            background-color: var(--primary);
+            color: var(--surfaceText);
+        }
+
+        &-secondary {
+            background-color: transparent;
+            color: var(--primaryText);
+        }
+    }
+
+    &--size {
+        &-large {
+            padding: toRem(22) toRem(40);
+            font-size: toRem(16);
+            line-height: toRem(16);
+        }
+
+        &-medium {
+            padding: toRem(16) toRem(20);
+            font-size: toRem(14);
+            line-height: toRem(16);
+        }
+    }
+}
