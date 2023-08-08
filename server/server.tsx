@@ -20,9 +20,10 @@ fs.readdirSync('./dist/assets').forEach(file => {
 //     express.static(resolve(dir), {
 //         maxAge: cache && isProd ? '1y' : 0,
 //     })
-
-server.use('/assets', express.static('./dist/assets'))
-server.use('/fonts', express.static('./public/fonts'))
+server.use(express.static(__dirname + 'public'));
+// server.use('/assets', express.static('./dist/assets'))
+// server.use('/fonts', express.static('./public/fonts'))
+// server.use('/images', express.static('../public/images'))
 // server.use('/fonts', serve('./public/fonts', true))
 
 server.get('*', async (req, res) => {

@@ -8,7 +8,7 @@ const { ncp } = require('ncp')
 
 const src = './resources/shared/assets/images/'
 const dest = './public/images/'
-const sharp = req('sharp')
+const sharp = require('sharp')
 
 const removeBrackets = function (string) {
     const brackets = string.match(/\[(.*?)\]/)

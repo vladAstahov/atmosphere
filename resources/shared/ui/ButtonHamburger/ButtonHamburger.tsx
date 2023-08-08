@@ -6,7 +6,7 @@ export type ButtonHamburgerProps = DefaultProps & {
 }
 
 export const ButtonHamburger = React.memo<ButtonHamburgerProps>(({ className, onPress }) => {
-    const [value, setValue] = useState(true)
+    const [value, setValue] = useState(false)
 
     const classes = useMemo(() => [
         'button-hamburger',
@@ -21,7 +21,7 @@ export const ButtonHamburger = React.memo<ButtonHamburgerProps>(({ className, on
         onPress()
     }, [setValue, onPress])
 
-    return <button className={classes} onClick={onClick}>
+    return <button aria-label="Меню" className={classes} onClick={onClick}>
         <span />
         <span />
         <span />

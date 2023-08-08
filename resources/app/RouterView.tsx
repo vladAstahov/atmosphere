@@ -1,9 +1,10 @@
 import React from "react";
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Main } from "resources/pages";
 
 function RouterView() {
     return <Routes>
-        <Route path="/" element={<h1>Page</h1>}></Route>
+        <Route path="/" element={<Main />}></Route>
     </Routes>
 }
 

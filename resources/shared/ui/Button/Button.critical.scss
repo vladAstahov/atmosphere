@@ -29,4 +29,14 @@
             line-height: toRem(16);
         }
     }
+
+    @include media-tablet {
+        &--size {
+            &-medium {
+                padding: toRem(14) toRem(16);
+                font-size: toRem(12);
+                line-height: toRem(13);
+            }
+        }
+    }
 }

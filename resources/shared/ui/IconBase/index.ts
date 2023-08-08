@@ -1,5 +1,1 @@
-import IconBase from "./IconBase";
-
-export {
-    IconBase
-}
+export { IconBase } from "./IconBase"; 
