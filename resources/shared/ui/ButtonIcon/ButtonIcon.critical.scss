@@ -2,10 +2,14 @@
     width: toRem(48);
     height: toRem(48);
     border-radius: 50%;
-    border: 1px solid var(--primary);
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(200, 200, 200, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__icon {
-        color: var(--primary);
+        color: rgba(255, 255, 255, 1);
         font-size: toRem(20);
     }
 }

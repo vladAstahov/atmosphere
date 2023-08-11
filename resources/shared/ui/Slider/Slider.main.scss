@@ -1,0 +1,13 @@
+.slider {
+
+    &__card,
+    &__item {
+        transition: 0.5s ease;
+        transition-property: opacity;
+        opacity: 0;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+}

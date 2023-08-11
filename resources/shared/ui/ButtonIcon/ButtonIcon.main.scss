@@ -3,19 +3,10 @@
 
     @include media-desktop {
         transition: 0.3s ease;
-        transition-property: border-color;
-
-        &__icon {
-            transition: 0.3s ease;
-            transition-property: color;
-        }
+        transition-property: background-color;
 
         &:hover {
-            border-color: var(--primaryHover);
-
-            #{$b}__icon {
-                color: var(--primaryHover);
-            }
+            background-color: rgba(200, 200, 200, 0.8);
         }
     }
 

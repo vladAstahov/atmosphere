@@ -4,8 +4,8 @@
     &__title {
         margin: 0 toRem(40);
         color: rgba(76, 81, 86, 1);
-        font-size: toRem(28);
-        line-height: toRem(37);
+        font-size: 28px;
+        line-height: 37px;
         font-weight: 600;
         text-align: center;
 
@@ -16,9 +16,9 @@
 
     &__wrapper {
         width: 100%;
-        margin-top: toRem(24);
+        margin-top: 24px;
         aspect-ratio: 1.5;
-        border-radius: toRem(40);
+        border-radius: 20px;
         overflow: hidden;
         position: relative;
     }
@@ -34,7 +34,7 @@
 
     @include media-desktop {
         &__title {
-            width: toRem(694);
+            width: 694px;
             margin: 0 auto;
         }
 

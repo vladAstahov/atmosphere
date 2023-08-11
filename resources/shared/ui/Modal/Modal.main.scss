@@ -1,0 +1,56 @@
+.modal {
+    transition: 0.3s ease;
+    transition-property: opacity;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    opacity: 0;
+    background: rgba(86, 86, 101, 0.10);
+    backdrop-filter: blur(50px);
+
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    &__wrapper {
+        transition: 0.3s ease;
+        transition-property: opacity, transform;
+
+        position: relative;
+        margin: 15px;
+        height: 100%;
+
+        opacity: 0;
+        transform: translateY(-100%);
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+
+    &__title {
+        @include center(horizontal);
+        display: block;
+        top: 15px;
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    &__children {
+        flex-grow: 1;
+        margin-top: 18px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: calc(100vh - 80px);
+    }
+}

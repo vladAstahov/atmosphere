@@ -1,3 +1,5 @@
 export * from './Header'
 export * from './Main'
 export * from './Ideas'
+export * from './Reasons'
+export * from './Rooms'

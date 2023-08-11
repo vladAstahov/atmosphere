@@ -1,5 +1,5 @@
 .ideas {
-    padding-top: toRem(80);
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,18 +8,18 @@
         display: block;
         position: absolute;
         color: rgba(250, 251, 253, 1);
-        top: toRem(-24);
+        top: -24px;
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
-        font-size: toRem(48);
+        font-size: 48px;
     }
 
     &__title {
         color: rgba(86, 86, 101, 1);
-        margin: 0 toRem(15);
-        font-size: toRem(24);
-        line-height: toRem(34);
+        margin: 0 15px;
+        font-size: 24px;
+        line-height: 34px;
         text-align: center;
         font-weight: 600;
     }
@@ -28,22 +28,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: toRem(40);
+        margin-top: 40px;
     }
 
     &__circle {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: toRem(210);
-        height: toRem(210);
+        width: 210px;
+        height: 210px;
         border: 1px solid rgba(86, 86, 101, 1);
         border-radius: 50%;
 
         p {
             color: rgba(86, 86, 101, 1);
-            font-size: toRem(14);
-            line-height: toRem(22);
+            font-size: 14px;
+            line-height: 22px;
             text-align: center;
         }
 
@@ -51,30 +51,30 @@
 
             &:nth-child(2),
             &:nth-child(3) {
-                margin-top: toRem(-20);
+                margin-top: -20px;
             }
         }
     }
 
     @include media-desktop {
         &__title {
-            width: toRem(785);
+            width: 785px;
         }
 
         &__circles {
             flex-direction: row;
             justify-content: center;
-            margin-top: toRem(60);
+            margin-top: 60px;
         }
 
         &__circle {
             margin-top: 0;
-            width: toRem(240);
-            height: toRem(240);
+            width: 240px;
+            height: 240px;
 
             &:nth-child(2),
             &:nth-child(3) {
-                margin-left: toRem(-20);
+                margin-left: -20px;
             }
         }
     }
