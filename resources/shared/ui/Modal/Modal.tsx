@@ -6,19 +6,21 @@ import { ButtonIcon } from "resources/shared/ui/ButtonIcon"
 export type ModalProps = React.PropsWithChildren & DefaultProps & {
     title: string
     isVisible: boolean,
-    onClose: () => void
+    onClose: () => void,
+    onOpened?: () => void
 }
 
 // @ts-ignore
 let timeout
 
-export const Modal = React.memo<ModalProps>(({ title, isVisible, onClose, children, className }) => {
+export const Modal = React.memo<ModalProps>(({ title, isVisible, onClose, children, className, onOpened }) => {
     const [isAnimation, setIsAnimation] = useState(false)
     const [isShow, setIsShow] = useState(false)
     const { blockScroll, allowScroll } = useScrollDisable()
     useEffect(() => {
         if (isVisible) {
             setIsShow(true)
+            onOpened?.()
             blockScroll()
             timeout = setTimeout(() => {
                 setIsAnimation(true)
@@ -37,6 +39,11 @@ export const Modal = React.memo<ModalProps>(({ title, isVisible, onClose, childr
         }
     }, [isVisible])
 
+    useEffect(() => {
+        if (isShow) {
+            onOpened?.()
+        }
+    }, [isShow])
 
     return <div>
         {isShow && (

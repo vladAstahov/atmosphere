@@ -1,5 +1,15 @@
 import React from "react"
-import { Header, Main as MainSection, Ideas, Reasons, Rooms } from "resources/pages/Main/sections"
+import {
+    Header,
+    Main as MainSection,
+    Ideas,
+    Reasons,
+    Rooms,
+    Booking,
+    Benefits,
+    Certificate,
+    Reviews
+} from "resources/pages/Main/sections"
 
 export const Main = () => {
     return <div>
@@ -8,5 +18,9 @@ export const Main = () => {
         <Ideas />
         <Reasons />
         <Rooms />
+        <Booking />
+        <Benefits />
+        <Certificate />
+        <Reviews />
     </div>
 }

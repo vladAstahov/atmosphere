@@ -1,0 +1,60 @@
+.benefits {
+    margin-top: 32px;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: -12px;
+        margin-top: -24px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 102px;
+        margin-right: 12px;
+        margin-top: 24px;
+        box-sizing: border-box;
+    }
+
+    &__icon {
+        font-size: 44px;
+        color: rgba(86, 86, 101, 1);
+    }
+
+    &__text {
+        display: block;
+        margin-top: 12px;
+
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(86, 86, 101, 1);
+    }
+
+    @include media-desktop {
+        margin-top: 40px;
+
+        &__wrapper {
+            margin-right: -12px;
+            margin-top: -12px;
+        }
+
+        &__card {
+            width: 230px;
+            border-radius: 60px;
+            border: 1px solid rgba(86, 86, 101, 0.08);
+            margin-right: 12px;
+            margin-top: 12px;
+            height: 180px;
+            justify-content: center;
+        }
+    }
+}
