@@ -1,0 +1,150 @@
+.contacts {
+    position: relative;
+    margin-top: 56px;
+
+    &__title {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+        text-align: center;
+        color: rgba(86, 86, 101, 1);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    &__circle {
+        &--map {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+
+    &__map {
+        @include center();
+        overflow:hidden;
+    }
+
+    &__link {
+        color:#eee;
+        font-size:12px;
+        position:absolute;
+
+        &--name {
+            top: 0;
+        }
+
+        &--description {
+            top: 14px;
+        }
+    }
+
+    &__iframe {
+        position:relative;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 12px;
+        cursor: pointer;
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 16px;
+        color: rgba(86, 86, 101, 1);
+
+        @include media-maxTablet {
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid rgba(242, 242, 243, 1);
+            border-radius: 50px;
+        }
+    }
+
+    &__icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid rgba(86, 86, 101, 0.08);
+    }
+
+    &__icon {
+        font-size: 14px;
+        color: rgba(187, 187, 193, 1);
+    }
+
+    @include media-desktop {
+        margin-top: 80px;
+        padding-top: 80px;
+        overflow: hidden;
+        height: 720px;
+
+        &__container {
+            @include center(horizontal);
+            top: 80px;
+            flex-direction: row;
+            margin-top: 0;
+        }
+
+        &__decoration {
+            @include center(horizontal);
+            top: 0;
+            font-size: 120px;
+            line-height: 120px;
+            color: rgba(250, 251, 253, 1);
+            font-weight: 700;
+        }
+
+        &__circle {
+            width: 640px;
+            height: 640px;
+            border-radius: 50%;
+            border: 2px solid #F2F2F3;
+            margin-left: -100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #fff;
+            align-items: center;
+
+            &--map {
+                z-index: 3;
+            }
+        }
+
+        &__map {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__iframe {
+            width: 120%;
+            height: 120%;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 50px;
+            text-align: left;
+        }
+
+        &__card {
+            margin-top: 12px;
+
+            &:nth-child(1) {
+                margin-top: 24px;
+            }
+        }
+    }
+}

@@ -8,11 +8,13 @@ import {
     Booking,
     Benefits,
     Certificate,
-    Reviews
+    Reviews,
+    Contacts,
+    Footer
 } from "resources/pages/Main/sections"
 
 export const Main = () => {
-    return <div>
+    return <>
         <Header />
         <MainSection />
         <Ideas />
@@ -22,5 +24,7 @@ export const Main = () => {
         <Benefits />
         <Certificate />
         <Reviews />
-    </div>
+        <Contacts />
+        <Footer />
+    </>
 }
